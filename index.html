@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
+
+        img, .click-text {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+
+        .click-text {
+            margin-top: 10px;
+            font-size: 10px;
+            color: #878787; 
+            font-family:"verdana";
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="bigdawg.jpg" alt=":smirk:" id="fadeImage" style="width: 400px; height: 520px;">
+    <p class="click-text" id="fadeText">(tap me!)</p>
+
+    <script>
+        window.onload = function() {
+            const image = document.getElementById('fadeImage');
+            const text = document.getElementById('fadeText');
+
+            image.classList.add('fade-in');
+            text.classList.add('fade-in');
+
+            image.onclick = function() {
+                window.location.href = 'mixtape.html';
+            }
+        };
+    </script>
+</body>
+</html>
